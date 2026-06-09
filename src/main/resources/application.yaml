@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: AI_budgeting
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+          response-format:
+            type: text
+      audio:
+        transcription:
+          options:
+            model: whisper-1
+            language: pt
+            temperature: 0
+            response-format: text
+            prompt: |
+              Audio em portugues brasileiro.
+              Audio tem descricao de gastos financeiros
+              As frases normalmente contem:
+              - um valor em reais(numero + "reais")
+              - uma ação (gastei, paguei, comprei)
+              - um local ou estabelecimento (mercado, farmacio, restaurante, etc.
+logging:
+  level:
+    org.springframework.ai: DEBUG
+
+
+
