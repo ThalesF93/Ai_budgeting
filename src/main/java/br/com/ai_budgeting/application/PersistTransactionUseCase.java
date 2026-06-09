@@ -6,8 +6,10 @@ import br.com.ai_budgeting.domain.Category;
 import br.com.ai_budgeting.domain.Transaction;
 import br.com.ai_budgeting.domain.TransactionRepository;
 import lombok.Data;
+import org.springframework.stereotype.Service;
 
 @Data
+@Service
 public class PersistTransactionUseCase {
 
     private final TransactionRepository transactionRepository;

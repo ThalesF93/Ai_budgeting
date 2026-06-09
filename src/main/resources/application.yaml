@@ -1,6 +1,18 @@
 spring:
   application:
     name: AI_budgeting
+  docker:
+    compose:
+      enabled: true
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/budget-db
+#    username: postgres
+#    password: postgres
+#    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
   ai:
     openai:
       api-key: ${OPENAI_API_KEY}
