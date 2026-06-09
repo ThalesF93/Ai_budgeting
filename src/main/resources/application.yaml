@@ -10,6 +10,12 @@ spring:
           response-format:
             type: text
       audio:
+        speech:
+          options:
+            model: gpt-4o-mini-tts
+            voice: nova
+            speed: 1.1
+            response-format: mp3
         transcription:
           options:
             model: whisper-1
