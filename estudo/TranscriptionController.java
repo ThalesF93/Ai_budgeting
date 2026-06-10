@@ -22,8 +22,6 @@ public class TranscriptionController {
         public String transcribe(@RequestParam("file") MultipartFile file){
             var resource = file.getResource();
             return transcriptionModel.transcribe(resource);
-
-
     }
 
 }

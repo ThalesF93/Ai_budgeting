@@ -10,10 +10,7 @@ import java.beans.BeanProperty;
 @SpringBootApplication
 public class AiBudgetingApplication {
 
-    @Bean
-    ChatClient chatClient(ChatClient.Builder builder){
-        return builder.build();
-    }
+
 
     public static void main(String[] args) {
         SpringApplication.run(AiBudgetingApplication.class, args);
